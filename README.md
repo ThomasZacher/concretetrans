@@ -1,3 +1,5 @@
 # concretetrans
 
-Website base on the Bootstrap Carousel template
+Website based on Django and Bootstrap's Carousel template
+
+Features automatic emailsending via contactform and embedding of Googlemaps
