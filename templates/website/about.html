@@ -1,1 +1,54 @@
+{% extends 'website/base.html' %}
+{% load static %}
 
+<meta charset="utf-8" />
+
+{% block css_block %}
+{% endblock %}
+
+{% block navbar_block %}
+	<!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+    <div class="nav-collapse collapse">
+      <ul class="nav">
+        <li><a href="/">Home</a></li>
+        <li class="active"><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li class="nav-header">Nav header</li>
+            <li><a href="#">Separated link</a></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+{% endblock %} 
+
+{% block body_block %}
+	<div class="container">
+	<div class="hero-unit">
+		<h1>About Concretetrans</h1>
+		This is <strong>Concretetrans' about page</strong>.<br />
+	</div>
+	<div class="hero-unit">
+		<div id="map"></div>
+	</div>
+
+
+	<!-- FOOTER -->
+    <footer>
+		<p class="pull-right"><a href="/about">Back to top</a></p>
+        <p>&copy; Concretetrans 2016 · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    </footer>
+    </div>
+{% endblock %}
+
+{% block script_block %}
+	<script src="{% static 'js/map.js' %}"></script>
+  	<script src="https://maps.googleapis.com/maps/api/js?"></script>
+{% endblock %}  	
